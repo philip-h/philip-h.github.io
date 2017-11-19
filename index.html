@@ -299,29 +299,23 @@ if key_is_pressed("right") and self.x < 300:
     
 if key_was_pressed("space"):
     for i in range(-1,2):
-    shot = object_new("obj_projectile")
-    shot.sprite = sprite_new("spr_projectile")
-    shot.x = self.x + (i * 50)
-    shot.y = self.y
+        shot = object_new("obj_projectile")
+        shot.sprite = sprite_new("spr_projectile")
+        shot.x = self.x + (i * 50)
+        shot.y = self.y
     
 if collision_check(self, "obj_asteroid"):
     self.health -= 1
-    if self.health <= 0:
-    destroy(self)
     asteroid = collision_check(self, "obj_asteroid")
     destroy(asteroid)
 
 if collision_check(self, "obj_enemy_projectile"):
     self.health -= 1
-    if self.health <= 0:
-    destroy(self)
     enemyProjectile = collision_check(self, "obj_enemy_projectile")
     destroy(enemyProjectile)
 
 if collision_check(self, "obj_enemy"):
     self.health -= 1
-    if self.health <= 0:
-    destroy(self)
     enemy = collision_check(self, "obj_enemy")
     shield = object_new('obj_shield_pickup')
     shield.x = enemy.x
