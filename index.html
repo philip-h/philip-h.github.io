@@ -26,8 +26,8 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
-                Need's A Team Name (3pm)
+            <a class="nav-link" id="MP-tab" data-toggle="tab" href="#MP" role="tab" aria-controls="MP" aria-selected="false">
+                Math Pumpkins (3pm)
             </a>
         </li>
     </ul>
@@ -104,6 +104,18 @@ if collision_check(self, "obj_asteroid"):
     curAsteroid = collision_check(self, "obj_asteroid")
     health -= 1
     destroy(curAsteroid)
+    
+if collision_check(self, "obj_enemy_projectile"):
+    enemy_projectile = collision_check(self, "obj_enemy_projectile")
+    health -= 1
+    destroy(enemy_projectile)
+  
+if collision_check(self, "obj_enemy"):
+    enemy = collision_check(self, "obj_enemy")
+    health -= 1
+    destroy(enemy)
+
+    
             </code></pre>
 
             <h1>obj_projectile</h1>
@@ -125,8 +137,13 @@ if collision_check(self,'obj_enemy'):
     curEnemy.health -= 1
     
     if curEnemy.health <= 0:
-    destroy(curEnemy)
+        destroy(curEnemy)
     
+    destroy(self)
+
+if collision_check(self, "obj_enemy_projectile"):
+    enemy_projectile = collision_check(self, "obj_enemy_projectile")
+    destroy(enemy_projectile)
     destroy(self)
             </code></pre>
 
@@ -180,19 +197,19 @@ randomChoice = random.randint(0,1)
 
 if timer >= 100:
     if randomChoice == 0:
-    newEnemy = object_new("obj_enemy")
-    newEnemy.sprite = sprite_new("spr_enemy")
-    timer = 0
-    newEnemy.y = self.y
-    randomX = random.randint(-300,300)
-    newEnemy.x = randomX
+        newEnemy = object_new("obj_enemy")
+        newEnemy.sprite = sprite_new("spr_enemy")
+        timer = 0
+        newEnemy.y = self.y
+        randomX = random.randint(-300,300)
+        newEnemy.x = randomX
     elif randomChoice == 1:
-    newAsteroid = object_new("obj_asteroid")
-    newAsteroid.sprite = sprite_new("spr_asteroid")
-    timer = 0
-    newAsteroid.y = self.y
-    randomX = random.randint(-300,300)
-    newAsteroid.x = randomX
+        newAsteroid = object_new("obj_asteroid")
+        newAsteroid.sprite = sprite_new("spr_asteroid")
+        timer = 0
+        newAsteroid.y = self.y
+        randomX = random.randint(-300,300)
+        newAsteroid.x = randomX
             </code></pre>
 
             <h1>obj_enemy_projectile</h1>
@@ -211,39 +228,51 @@ self.y -= 2
         </div>
 
         <div class="tab-pane fade" id="PCT" role="tabpanel" aria-labelledby="PCT-tab">
-            <h1>game ( or room )</h1>
+            <h1>game</h1>
             <h2>Start</h2>
             <pre><code class="language-python">
-# Enter the start code for your game here.
+room_set('rm_level1')
+score = 0                           
+            </code></pre>
+
+            <h2>Loop</h2>
+            <h3>Nothing</h3>
+
+            <h1>rm_level1</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for rm_level1 here.
 bg = object_new("obj_background")
 bg.sprite = sprite_new("spr_background")
 
 player = object_new("obj_player")
 player.sprite = sprite_new("spr_player")
 
-asteroid = object_new("obj_asteroid")
-asteroid.sprite = sprite_new("spr_asteroid")
-
-player.x = 101
-player.y = 45
-
-asteroid2 = object_new("obj_asteroid")
-asteroid2.sprite = sprite_new("spr_asteroid")
-
-asteroid.x = -100
-asteroid.y = 250
-
-asteroid2.x = 100
-asteroid2.y = 250
-
-enemy = object_new("obj_enemy")
-enemy.sprite = sprite_new("spr_enemy")
+player.y = -50
 
 spawner = object_new("obj_spawner")
 spawner.y = 300
-                                    
-            </code></pre>
+            </code></pre>    
 
+            <h2>Loop</h2>
+            <h3>Nothing</h3>
+
+            <h1>rm_game_over</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for rm_game_over here.
+game_over = object_new('obj_game_over')    
+            </code></pre>
+            <h2>Loop</h2>
+            <h3>Nothing</h3>
+
+            <h1>rm_victory</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for rm_victory here.
+victory = object_new('obj_victory')
+                    
+            </code></pre>
             <h2>Loop</h2>
             <h3>Nothing</h3>
 
@@ -303,7 +332,10 @@ if collision_check(self, "obj_shield_pickup"):
     self.health += 1
     shield = collision_check(self, "obj_shield_pickup")
     destroy(shield)
-                                    
+
+if self.health <= 0:
+    destroy(self)
+    room_set('rm_game_over')             
             </code></pre>
 
             <h1>obj_projectile</h1>
@@ -319,24 +351,28 @@ if collision_check(self,"obj_asteroid"):
     col = collision_check(self,"obj_asteroid")
     object_destroy(col)
     object_destroy(self)
+    game.score += 1
     
 if collision_check(self,"obj_enemy"):
     curEnemy = collision_check(self,"obj_enemy")
     curEnemy.health -= 1
     
     if curEnemy.health <= 0:
-    
-    shield = object_new('obj_shield_pickup')
-    shield.x = curEnemy.x
-    shield.y = curEnemy.y
-    destroy(curEnemy)
-    
+        game.score += 3
+        shield = object_new('obj_shield_pickup')
+        shield.x = curEnemy.x
+        shield.y = curEnemy.y
+        destroy(curEnemy)
+
     destroy(self)
     
 if collision_check(self,"obj_enemy_projectile"):
     col = collision_check(self,"obj_enemy_projectile")
     object_destroy(col)
     object_destroy(self)
+    
+if game.score >= 50:
+    room_set('rm_victory')
             </code></pre>
 
             <h1>obj_asteroid</h1>
@@ -391,18 +427,18 @@ randomChoice = random.randint(0,1)
 
 if timer >= 120:
     if randomChoice == 0:
-    newEnemy = object_new("obj_enemy")
-    newEnemy.sprite = sprite_new("spr_enemy")
-    newEnemy.y = self.y
-    randomX = random.randint(-300,300)
-    newEnemy.x = randomX
+        newEnemy = object_new("obj_enemy")
+        newEnemy.sprite = sprite_new("spr_enemy")
+        newEnemy.y = self.y
+        randomX = random.randint(-300,300)
+        newEnemy.x = randomX
     elif randomChoice == 1:
-    newAsteroid = object_new("obj_asteroid")
-    newAsteroid.sprite = sprite_new("spr_asteroid")
-    newAsteroid.y = self.y
-    randomX = random.randint(-300,300)
-    newAsteroid.x = randomX
-    timer = 0
+        newAsteroid = object_new("obj_asteroid")
+        newAsteroid.sprite = sprite_new("spr_asteroid")
+        newAsteroid.y = self.y
+        randomX = random.randint(-300,300)
+        newAsteroid.x = randomX
+        timer = 0
             </code></pre>
 
             <h1>obj_enemy_projectile</h1>
@@ -417,16 +453,305 @@ self.y -= 2
             <h1>obj_shield_pickup</h1>
             <h2>Start</h2>
             <pre><code class="language-python">
-# Enter the start code for obj_shield_pickuphere.
+# Enter the start code for obj_shield_pickup here.
 sprite = sprite_new('spr_shield_pickup')    
+            </code></pre>
+            <h2>Loop</h2>
+            <h3>Nothing</h3>
+
+            <h1>obj_game_over</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for obj_game_over here.
+sprite = sprite_new('spr_game_over')  
+            </code></pre>
+            <h2>Loop</h2>
+            <h3>Nothing</h3>
+
+            <h1>obj_victory</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for obj_victory here.
+sprite = sprite_new('spr_victory')    
             </code></pre>
             <h2>Loop</h2>
             <h3>Nothing</h3>
 
         </div>
 
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-            <h1>I Need to get your code!</h1>
+        <div class="tab-pane fade" id="MP" role="tabpanel" aria-labelledby="MP-tab">
+            <h1>This is the completed Code for the Space Game tutorial!!</h1>
+            <h4>I did add the background and collision check to the enemy projectile which isn't in the tutorial</h4>
+
+            <h1>game</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for your game here.
+room_set('rm_level1')
+score = 0
+            </code></pre>
+            <h2>Loop</h2>
+            <h3>Nothing</h3>
+
+            <h1>rm_level1</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for rm_level1 here.
+background = object_new('obj_background')
+player = object_new('obj_player')
+
+spawner = object_new('obj_spawner')
+spawner.y = 300    
+            </code></pre>
+
+            <h1>rm_victory</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for rm_victory here.
+victory = object_new('obj_victory')
+            </code></pre>
+            <h2>Loop</h2>
+            <h3>Nothing</h3>
+
+            <h1>rm_game_over</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for rm_game_over here.
+victory = object_new('obj_game_over')
+            </code></pre>
+            <h2>Loop</h2>
+            <h3>Nothing</h3>
+
+            <h1>obj_player</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for obj_player here.
+sprite = sprite_new('spr_player')
+
+health = 5
+            </code></pre>
+            <h2>Loop</h2>
+            <pre><code class="language-python">
+# Enter the loop code for obj_player here.
+if key_is_pressed('up'):
+    self.y += 3
+
+if key_is_pressed('down'):
+    self.y -= 3
+
+if key_is_pressed('right'):
+    self.x += 3
+
+if key_is_pressed('left'):
+    self.x -=3
+    
+if key_was_pressed('space'):
+    projectile = object_new('obj_projectile')
+    projectile.x = self.x
+    projectile.y = self.y
+
+if key_was_pressed('s'):
+    print('Score: ' + game.score)
+    
+if self.x > 300:
+    self.x = 300
+    
+if self.x < -300:
+    self.x = -300
+    
+if self.y > 210:
+    self.y = 210
+    
+if self.y < -210:
+    self.y = -210
+    
+    
+if collision_check(self, 'obj_asteroid'):
+    asteroid = collision_check(self, 'obj_asteroid')
+    destroy(asteroid)
+    health -= 1
+    
+if collision_check(self, 'obj_enemy_projectile'):
+    enemyProjectile = collision_check(self, 'obj_enemy_projectile')
+    destroy(enemyProjectile)
+    health -= 1
+    
+if collision_check(self, 'obj_shield_pickup'):
+    shield = collision_check(self, 'obj_shield_pickup')
+    destroy(shield)
+    health += 1
+    
+if health > 5:
+    health = 5
+    
+if health <= 0:
+    room_set('rm_game_over')
+    destroy(self)
+            </code></pre>
+
+            <h1>obj_projectile</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for obj_projectile here.
+sprite = sprite_new('spr_projectile')    
+            </code></pre>
+            <h2>Loop</h2>
+            <pre><code class="language-python">
+# Enter the loop code for obj_projectile here.
+self.y += 4
+
+if collision_check(self, 'obj_asteroid'):
+    asteroid = collision_check(self, 'obj_asteroid')
+    destroy(asteroid)
+    game.score += 1
+    destroy(self)
+
+if collision_check(self, 'obj_enemy'):
+    enemy = collision_check(self, 'obj_enemy')
+    enemy.health -= 1
+    destroy(self)
+    
+if collision_check(self, 'obj_enemy_projectile'):
+    enemyProjectile = collision_check(self, 'obj_enemy_projectile')
+    destroy(enemyProjectile)
+    destroy(self)
+    
+if self.y > 600:
+    destroy(self)
+            </code></pre>
+
+            <h1>obj_asteroid</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for obj_asteroid here.
+sprite = sprite_new('spr_asteroid')    
+            </code></pre>
+            <h2>Loop</h2>
+            <pre><code class="language-python">
+# Enter the loop code for obj_asteroid here.
+self.y -= 1
+
+if self.y < -400:
+    destroy(self)    
+            </code></pre>
+
+            <h1>obj_enemy</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for obj_enemy here.
+sprite = sprite_new('spr_enemy')
+
+projectileTimer = 0
+health = 3    
+            </code></pre>
+            <h2>Loop</h2>
+            <pre><code class="language-python">
+# Enter the loop code for obj_enemy here.
+self.y -= 1
+
+projectileTimer += 1
+
+if projectileTimer == 120:
+    enemyProjectile = object_new('obj_enemy_projectile')
+    enemyProjectile.x = self.x
+    enemyProjectile.y = self.y
+    projectileTimer = 0
+    
+if health <= 0:
+    game.score += 5
+    destroy(self)    
+            </code></pre>
+
+            <h1>obj_background</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for obj_background here.
+sprite = sprite_new('spr_background')    
+            </code></pre>
+            <h2>Loop</h2>
+            <h3>Nothing</h3>
+
+            <h1>obj_spawner</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for obj_spawner here.
+import random
+
+asteroidTimer = 0
+shieldTimer = 0
+enemyTimer = 0    
+            </code></pre>
+            <h2>Loop</h2>
+            <pre><code class="language-python">
+# Enter the loop code for obj_spawner here.
+asteroidTimer += 1
+shieldTimer += 1
+enemyTimer += 1
+
+if asteroidTimer == 120:
+    asteroid = object_new('obj_asteroid')
+    asteroidOffset = random.randint(-200,200)
+    asteroid.x = self.x + asteroidOffset
+    asteroid.y = self.y + asteroidOffset
+    asteroidTimer = 0
+
+if shieldTimer == 240:
+    shieldOffset = random.randint(-200,200)
+    shield = object_new('obj_shield_pickup')
+    shield.x = self.x + shieldOffset
+    shield.y = self.y + shieldOffset
+    shieldTimer = 0
+    
+if enemyTimer == 240:
+    enemyOffset = random.randint(-200,200)
+    enemy = object_new('obj_enemy')
+    enemy.x = self.x + enemyOffset
+    enemy.y = self.y + enemyOffset
+    enemyTimer = 0    
+            </code></pre>
+
+            <h1>obj_shield_pickup</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for obj_shield_pickup here.
+sprite = sprite_new('spr_shield_pickup')    
+            </code></pre>
+            <h2>Loop</h2>
+            <pre><code class="language-python">
+# Enter the loop code for obj_shield_pickup here.
+self.y -= 1    
+            </code></pre>
+
+            <h1>obj_enemy_projectile</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for obj_enemy_projectile here.
+sprite = sprite_new('spr_enemy_projectile')    
+            </code></pre>
+            <h2>Loop</h2>
+            <pre><code class="language-python">
+# Enter the loop code for obj_enemy_projectile here.
+self.y -= 2    
+            </code></pre>
+
+            <h1>obj_victory</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for obj_victory here.
+sprite = sprite_new('spr_victory')
+            </code></pre>
+            <h2>Loop</h2>
+            <h3>Nothing</h3>
+
+            <h1>obj_game_over</h1>
+            <h2>Start</h2>
+            <pre><code class="language-python">
+# Enter the start code for obj_game_over here.
+sprite = sprite_new('spr_game_over')    
+            </code></pre>
+            <h2>Loop</h2>
+            <h3>Nothing</h3>
+
         </div>
     </div>
 
