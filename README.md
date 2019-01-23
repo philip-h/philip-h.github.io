@@ -1,4 +1,4 @@
-#philip-h.github.io
+# philip-h.github.io
 
 Really crappy self assessment for educational philosophy
 
