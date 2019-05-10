@@ -1,1 +1,533 @@
-<!DOCTYPE html><html lang="en"><head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"> <link rel="stylesheet" href="style.css"> <title>Edu Self Assessment</title></head><body> <h3 class="title">Educational Philosophies Self-Assessment</h3> <table id="question-table" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp"> <thead> <tr> <th class="mdl-data-table__cell--non-numeric sticky">Question</th> <th class="mdl-data-table__cell--non-numeric sticky">1</th> <th class="mdl-data-table__cell--non-numeric sticky">2</th> <th class="mdl-data-table__cell--non-numeric sticky">3</th> <th class="mdl-data-table__cell--non-numeric sticky">4</th> <th class="mdl-data-table__cell--non-numeric sticky">5</th> </tr></thead> <tbody> <tr> <td class='mdl-data-table__cell--non-numeric'> The cirriculum should be universal; a given body of information about western civilization should be taught through discussion and lecture. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q1-1'> <input type='radio' id=q1-1' class='mdl-radio__button' name='q1' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q1-2'> <input type='radio' id=q1-2' class='mdl-radio__button' name='q1' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q1-3'> <input type='radio' id=q1-3' class='mdl-radio__button' name='q1' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q1-4'> <input type='radio' id=q1-4' class='mdl-radio__button' name='q1' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q1-5'> <input type='radio' id=q1-5' class='mdl-radio__button' name='q1' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Students are makers of meaning and construct their understandings from active experience, rather than through transmission from teachers. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q2-1'> <input type='radio' id=q2-1' class='mdl-radio__button' name='q2' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q2-2'> <input type='radio' id=q2-2' class='mdl-radio__button' name='q2' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q2-3'> <input type='radio' id=q2-3' class='mdl-radio__button' name='q2' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q2-4'> <input type='radio' id=q2-4' class='mdl-radio__button' name='q2' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q2-5'> <input type='radio' id=q2-5' class='mdl-radio__button' name='q2' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Education should emphasize personal growth through solving problems that are real to students. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q3-1'> <input type='radio' id=q3-1' class='mdl-radio__button' name='q3' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q3-2'> <input type='radio' id=q3-2' class='mdl-radio__button' name='q3' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q3-3'> <input type='radio' id=q3-3' class='mdl-radio__button' name='q3' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q3-4'> <input type='radio' id=q3-4' class='mdl-radio__button' name='q3' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q3-5'> <input type='radio' id=q3-5' class='mdl-radio__button' name='q3' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Curriculum should not be predetermined; rather, it should spring from students' interests and needs. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q4-1'> <input type='radio' id=q4-1' class='mdl-radio__button' name='q4' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q4-2'> <input type='radio' id=q4-2' class='mdl-radio__button' name='q4' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q4-3'> <input type='radio' id=q4-3' class='mdl-radio__button' name='q4' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q4-4'> <input type='radio' id=q4-4' class='mdl-radio__button' name='q4' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q4-5'> <input type='radio' id=q4-5' class='mdl-radio__button' name='q4' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> It is necessary and good that schools instill traditional values in students. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q5-1'> <input type='radio' id=q5-1' class='mdl-radio__button' name='q5' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q5-2'> <input type='radio' id=q5-2' class='mdl-radio__button' name='q5' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q5-3'> <input type='radio' id=q5-3' class='mdl-radio__button' name='q5' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q5-4'> <input type='radio' id=q5-4' class='mdl-radio__button' name='q5' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q5-5'> <input type='radio' id=q5-5' class='mdl-radio__button' name='q5' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Representing information as symbols in the mind is an important part of learning. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q6-1'> <input type='radio' id=q6-1' class='mdl-radio__button' name='q6' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q6-2'> <input type='radio' id=q6-2' class='mdl-radio__button' name='q6' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q6-3'> <input type='radio' id=q6-3' class='mdl-radio__button' name='q6' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q6-4'> <input type='radio' id=q6-4' class='mdl-radio__button' name='q6' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q6-5'> <input type='radio' id=q6-5' class='mdl-radio__button' name='q6' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Schools exist to provide practical preparation for work and life, not to nourish personal development. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q7-1'> <input type='radio' id=q7-1' class='mdl-radio__button' name='q7' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q7-2'> <input type='radio' id=q7-2' class='mdl-radio__button' name='q7' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q7-3'> <input type='radio' id=q7-3' class='mdl-radio__button' name='q7' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q7-4'> <input type='radio' id=q7-4' class='mdl-radio__button' name='q7' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q7-5'> <input type='radio' id=q7-5' class='mdl-radio__button' name='q7' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Teaching the great works of literature is less important than involving students in activities to criticize and shape society. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q8-1'> <input type='radio' id=q8-1' class='mdl-radio__button' name='q8' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q8-2'> <input type='radio' id=q8-2' class='mdl-radio__button' name='q8' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q8-3'> <input type='radio' id=q8-3' class='mdl-radio__button' name='q8' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q8-4'> <input type='radio' id=q8-4' class='mdl-radio__button' name='q8' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q8-5'> <input type='radio' id=q8-5' class='mdl-radio__button' name='q8' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Teachers, rather than imparting knowledge, are facilitators of conditions and experiences so students can construct their own understandings. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q9-1'> <input type='radio' id=q9-1' class='mdl-radio__button' name='q9' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q9-2'> <input type='radio' id=q9-2' class='mdl-radio__button' name='q9' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q9-3'> <input type='radio' id=q9-3' class='mdl-radio__button' name='q9' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q9-4'> <input type='radio' id=q9-4' class='mdl-radio__button' name='q9' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q9-5'> <input type='radio' id=q9-5' class='mdl-radio__button' name='q9' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> The aim of education should remain constant regardless of differences in era or society, it should not vary from one teacher to another. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q10-1'> <input type='radio' id=q10-1' class='mdl-radio__button' name='q10' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q10-2'> <input type='radio' id=q10-2' class='mdl-radio__button' name='q10' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q10-3'> <input type='radio' id=q10-3' class='mdl-radio__button' name='q10' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q10-4'> <input type='radio' id=q10-4' class='mdl-radio__button' name='q10' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q10-5'> <input type='radio' id=q10-5' class='mdl-radio__button' name='q10' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Schools should encourage student involvement in social change to aid in societal reform. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q11-1'> <input type='radio' id=q11-1' class='mdl-radio__button' name='q11' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q11-2'> <input type='radio' id=q11-2' class='mdl-radio__button' name='q11' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q11-3'> <input type='radio' id=q11-3' class='mdl-radio__button' name='q11' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q11-4'> <input type='radio' id=q11-4' class='mdl-radio__button' name='q11' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q11-5'> <input type='radio' id=q11-5' class='mdl-radio__button' name='q11' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> The emphasis in schools should be hard work, respect for authority, and discipline, rather than encouraging free choice. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q12-1'> <input type='radio' id=q12-1' class='mdl-radio__button' name='q12' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q12-2'> <input type='radio' id=q12-2' class='mdl-radio__button' name='q12' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q12-3'> <input type='radio' id=q12-3' class='mdl-radio__button' name='q12' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q12-4'> <input type='radio' id=q12-4' class='mdl-radio__button' name='q12' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q12-5'> <input type='radio' id=q12-5' class='mdl-radio__button' name='q12' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> If encouraging and nourishing environments are provided, learning will flourish naturally because people have an inherent tendency to learn. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q13-1'> <input type='radio' id=q13-1' class='mdl-radio__button' name='q13' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q13-2'> <input type='radio' id=q13-2' class='mdl-radio__button' name='q13' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q13-3'> <input type='radio' id=q13-3' class='mdl-radio__button' name='q13' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q13-4'> <input type='radio' id=q13-4' class='mdl-radio__button' name='q13' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q13-5'> <input type='radio' id=q13-5' class='mdl-radio__button' name='q13' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Students, like computers, are information processors who must make sense of events and objects in their environments. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q14-1'> <input type='radio' id=q14-1' class='mdl-radio__button' name='q14' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q14-2'> <input type='radio' id=q14-2' class='mdl-radio__button' name='q14' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q14-3'> <input type='radio' id=q14-3' class='mdl-radio__button' name='q14' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q14-4'> <input type='radio' id=q14-4' class='mdl-radio__button' name='q14' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q14-5'> <input type='radio' id=q14-5' class='mdl-radio__button' name='q14' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Schools should guide society towards significant social change rather than merely passing on traditional values. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q15-1'> <input type='radio' id=q15-1' class='mdl-radio__button' name='q15' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q15-2'> <input type='radio' id=q15-2' class='mdl-radio__button' name='q15' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q15-3'> <input type='radio' id=q15-3' class='mdl-radio__button' name='q15' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q15-4'> <input type='radio' id=q15-4' class='mdl-radio__button' name='q15' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q15-5'> <input type='radio' id=q15-5' class='mdl-radio__button' name='q15' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Teachers should concentrate on conveying a common core of knowledge rather than experimenting with modifying curriculum. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q16-1'> <input type='radio' id=q16-1' class='mdl-radio__button' name='q16' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q16-2'> <input type='radio' id=q16-2' class='mdl-radio__button' name='q16' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q16-3'> <input type='radio' id=q16-3' class='mdl-radio__button' name='q16' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q16-4'> <input type='radio' id=q16-4' class='mdl-radio__button' name='q16' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q16-5'> <input type='radio' id=q16-5' class='mdl-radio__button' name='q16' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> The curriculum should focus on basic skills instead of students' individual interests. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q17-1'> <input type='radio' id=q17-1' class='mdl-radio__button' name='q17' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q17-2'> <input type='radio' id=q17-2' class='mdl-radio__button' name='q17' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q17-3'> <input type='radio' id=q17-3' class='mdl-radio__button' name='q17' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q17-4'> <input type='radio' id=q17-4' class='mdl-radio__button' name='q17' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q17-5'> <input type='radio' id=q17-5' class='mdl-radio__button' name='q17' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Students must learn to make good choices and to be responsible for their behavior. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q18-1'> <input type='radio' id=q18-1' class='mdl-radio__button' name='q18' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q18-2'> <input type='radio' id=q18-2' class='mdl-radio__button' name='q18' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q18-3'> <input type='radio' id=q18-3' class='mdl-radio__button' name='q18' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q18-4'> <input type='radio' id=q18-4' class='mdl-radio__button' name='q18' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q18-5'> <input type='radio' id=q18-5' class='mdl-radio__button' name='q18' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Conflicts to current understandings trigger the need to learn and to make meaning. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q19-1'> <input type='radio' id=q19-1' class='mdl-radio__button' name='q19' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q19-2'> <input type='radio' id=q19-2' class='mdl-radio__button' name='q19' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q19-3'> <input type='radio' id=q19-3' class='mdl-radio__button' name='q19' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q19-4'> <input type='radio' id=q19-4' class='mdl-radio__button' name='q19' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q19-5'> <input type='radio' id=q19-5' class='mdl-radio__button' name='q19' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Rewards controlled by the external environment lead to and result in all learning. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q20-1'> <input type='radio' id=q20-1' class='mdl-radio__button' name='q20' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q20-2'> <input type='radio' id=q20-2' class='mdl-radio__button' name='q20' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q20-3'> <input type='radio' id=q20-3' class='mdl-radio__button' name='q20' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q20-4'> <input type='radio' id=q20-4' class='mdl-radio__button' name='q20' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q20-5'> <input type='radio' id=q20-5' class='mdl-radio__button' name='q20' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Transmitting traditional values is less important than helping students to develop personal values. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q21-1'> <input type='radio' id=q21-1' class='mdl-radio__button' name='q21' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q21-2'> <input type='radio' id=q21-2' class='mdl-radio__button' name='q21' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q21-3'> <input type='radio' id=q21-3' class='mdl-radio__button' name='q21' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q21-4'> <input type='radio' id=q21-4' class='mdl-radio__button' name='q21' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q21-5'> <input type='radio' id=q21-5' class='mdl-radio__button' name='q21' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> The heart of understanding learning is concerned with how information is encoded, processed, remembered, and retrieved. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q22-1'> <input type='radio' id=q22-1' class='mdl-radio__button' name='q22' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q22-2'> <input type='radio' id=q22-2' class='mdl-radio__button' name='q22' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q22-3'> <input type='radio' id=q22-3' class='mdl-radio__button' name='q22' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q22-4'> <input type='radio' id=q22-4' class='mdl-radio__button' name='q22' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q22-5'> <input type='radio' id=q22-5' class='mdl-radio__button' name='q22' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Advocating the permanency of the classics is a vital part of teaching. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q23-1'> <input type='radio' id=q23-1' class='mdl-radio__button' name='q23' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q23-2'> <input type='radio' id=q23-2' class='mdl-radio__button' name='q23' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q23-3'> <input type='radio' id=q23-3' class='mdl-radio__button' name='q23' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q23-4'> <input type='radio' id=q23-4' class='mdl-radio__button' name='q23' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q23-5'> <input type='radio' id=q23-5' class='mdl-radio__button' name='q23' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Perceptions centered in experience should be emphasized, as well as the freedom and responsibility to achieve one's potential. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q24-1'> <input type='radio' id=q24-1' class='mdl-radio__button' name='q24' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q24-2'> <input type='radio' id=q24-2' class='mdl-radio__button' name='q24' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q24-3'> <input type='radio' id=q24-3' class='mdl-radio__button' name='q24' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q24-4'> <input type='radio' id=q24-4' class='mdl-radio__button' name='q24' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q24-5'> <input type='radio' id=q24-5' class='mdl-radio__button' name='q24' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Education should help drive society to better itself, rather than restricting itself to essential skills. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q25-1'> <input type='radio' id=q25-1' class='mdl-radio__button' name='q25' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q25-2'> <input type='radio' id=q25-2' class='mdl-radio__button' name='q25' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q25-3'> <input type='radio' id=q25-3' class='mdl-radio__button' name='q25' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q25-4'> <input type='radio' id=q25-4' class='mdl-radio__button' name='q25' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q25-5'> <input type='radio' id=q25-5' class='mdl-radio__button' name='q25' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Teachers should encourage democratic, project-based classrooms that emphasize interdisciplinary subject matter. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q26-1'> <input type='radio' id=q26-1' class='mdl-radio__button' name='q26' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q26-2'> <input type='radio' id=q26-2' class='mdl-radio__button' name='q26' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q26-3'> <input type='radio' id=q26-3' class='mdl-radio__button' name='q26' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q26-4'> <input type='radio' id=q26-4' class='mdl-radio__button' name='q26' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q26-5'> <input type='radio' id=q26-5' class='mdl-radio__button' name='q26' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> A knowledgeable individual facilitates or scaffolds learning for a novice based on understanding the learner's developmental level and the content to be learned. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q27-1'> <input type='radio' id=q27-1' class='mdl-radio__button' name='q27' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q27-2'> <input type='radio' id=q27-2' class='mdl-radio__button' name='q27' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q27-3'> <input type='radio' id=q27-3' class='mdl-radio__button' name='q27' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q27-4'> <input type='radio' id=q27-4' class='mdl-radio__button' name='q27' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q27-5'> <input type='radio' id=q27-5' class='mdl-radio__button' name='q27' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> The role of the teacher is help create a nurturing atmosphere for students and to promote the growth of the whole person. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q28-1'> <input type='radio' id=q28-1' class='mdl-radio__button' name='q28' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q28-2'> <input type='radio' id=q28-2' class='mdl-radio__button' name='q28' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q28-3'> <input type='radio' id=q28-3' class='mdl-radio__button' name='q28' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q28-4'> <input type='radio' id=q28-4' class='mdl-radio__button' name='q28' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q28-5'> <input type='radio' id=q28-5' class='mdl-radio__button' name='q28' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Teaching involves the support of memory storage and retrieval. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q29-1'> <input type='radio' id=q29-1' class='mdl-radio__button' name='q29' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q29-2'> <input type='radio' id=q29-2' class='mdl-radio__button' name='q29' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q29-3'> <input type='radio' id=q29-3' class='mdl-radio__button' name='q29' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q29-4'> <input type='radio' id=q29-4' class='mdl-radio__button' name='q29' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q29-5'> <input type='radio' id=q29-5' class='mdl-radio__button' name='q29' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Successful teaching creates an environment that controls student behavior and assesses learning of prescribed outcomes. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q30-1'> <input type='radio' id=q30-1' class='mdl-radio__button' name='q30' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q30-2'> <input type='radio' id=q30-2' class='mdl-radio__button' name='q30' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q30-3'> <input type='radio' id=q30-3' class='mdl-radio__button' name='q30' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q30-4'> <input type='radio' id=q30-4' class='mdl-radio__button' name='q30' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q30-5'> <input type='radio' id=q30-5' class='mdl-radio__button' name='q30' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> The greatest education centers mainly around the student's exposure to great achievements in subjects such as arts and literature. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q31-1'> <input type='radio' id=q31-1' class='mdl-radio__button' name='q31' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q31-2'> <input type='radio' id=q31-2' class='mdl-radio__button' name='q31' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q31-3'> <input type='radio' id=q31-3' class='mdl-radio__button' name='q31' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q31-4'> <input type='radio' id=q31-4' class='mdl-radio__button' name='q31' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q31-5'> <input type='radio' id=q31-5' class='mdl-radio__button' name='q31' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Learning requires modifying internal knowing structures in order to assimilate and accommodate new information. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q32-1'> <input type='radio' id=q32-1' class='mdl-radio__button' name='q32' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q32-2'> <input type='radio' id=q32-2' class='mdl-radio__button' name='q32' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q32-3'> <input type='radio' id=q32-3' class='mdl-radio__button' name='q32' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q32-4'> <input type='radio' id=q32-4' class='mdl-radio__button' name='q32' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q32-5'> <input type='radio' id=q32-5' class='mdl-radio__button' name='q32' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> The role of the teacher is to create an atmosphere that rewards desired behavior toward achieving goals and extinguishes undesirable behavior. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q33-1'> <input type='radio' id=q33-1' class='mdl-radio__button' name='q33' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q33-2'> <input type='radio' id=q33-2' class='mdl-radio__button' name='q33' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q33-3'> <input type='radio' id=q33-3' class='mdl-radio__button' name='q33' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q33-4'> <input type='radio' id=q33-4' class='mdl-radio__button' name='q33' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q33-5'> <input type='radio' id=q33-5' class='mdl-radio__button' name='q33' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> The primary goal for educators is to establish environments where students can learn independently through purposeful reflection about their experiences. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q34-1'> <input type='radio' id=q34-1' class='mdl-radio__button' name='q34' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q34-2'> <input type='radio' id=q34-2' class='mdl-radio__button' name='q34' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q34-3'> <input type='radio' id=q34-3' class='mdl-radio__button' name='q34' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q34-4'> <input type='radio' id=q34-4' class='mdl-radio__button' name='q34' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q34-5'> <input type='radio' id=q34-5' class='mdl-radio__button' name='q34' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Principles of reinforcement (anything that will increase the likelihood that an event will be repeated) and contiguity (how close two events must be chronologically for a bond to be created) are pivotal to explaining learning. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q35-1'> <input type='radio' id=q35-1' class='mdl-radio__button' name='q35' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q35-2'> <input type='radio' id=q35-2' class='mdl-radio__button' name='q35' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q35-3'> <input type='radio' id=q35-3' class='mdl-radio__button' name='q35' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q35-4'> <input type='radio' id=q35-4' class='mdl-radio__button' name='q35' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q35-5'> <input type='radio' id=q35-5' class='mdl-radio__button' name='q35' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Students' involvement in choosing how and what they should learn is central to education. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q36-1'> <input type='radio' id=q36-1' class='mdl-radio__button' name='q36' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q36-2'> <input type='radio' id=q36-2' class='mdl-radio__button' name='q36' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q36-3'> <input type='radio' id=q36-3' class='mdl-radio__button' name='q36' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q36-4'> <input type='radio' id=q36-4' class='mdl-radio__button' name='q36' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q36-5'> <input type='radio' id=q36-5' class='mdl-radio__button' name='q36' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Students need to develop declarative, procedural, and conditional knowledge. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q37-1'> <input type='radio' id=q37-1' class='mdl-radio__button' name='q37' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q37-2'> <input type='radio' id=q37-2' class='mdl-radio__button' name='q37' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q37-3'> <input type='radio' id=q37-3' class='mdl-radio__button' name='q37' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q37-4'> <input type='radio' id=q37-4' class='mdl-radio__button' name='q37' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q37-5'> <input type='radio' id=q37-5' class='mdl-radio__button' name='q37' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> One's behavior is shaped by one's environment; elements within that environment (rather than the individual learner) determine what is learned. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q38-1'> <input type='radio' id=q38-1' class='mdl-radio__button' name='q38' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q38-2'> <input type='radio' id=q38-2' class='mdl-radio__button' name='q38' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q38-3'> <input type='radio' id=q38-3' class='mdl-radio__button' name='q38' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q38-4'> <input type='radio' id=q38-4' class='mdl-radio__button' name='q38' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q38-5'> <input type='radio' id=q38-5' class='mdl-radio__button' name='q38' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> The most distinctive quality of human nature is the ability to reason; for this reason, the focus of education should be on developing intellect. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q39-1'> <input type='radio' id=q39-1' class='mdl-radio__button' name='q39' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q39-2'> <input type='radio' id=q39-2' class='mdl-radio__button' name='q39' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q39-3'> <input type='radio' id=q39-3' class='mdl-radio__button' name='q39' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q39-4'> <input type='radio' id=q39-4' class='mdl-radio__button' name='q39' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q39-5'> <input type='radio' id=q39-5' class='mdl-radio__button' name='q39' value='5' onclick='handleRadioClick()'> </label> </td></tr><tr> <td class='mdl-data-table__cell--non-numeric'> Learning should guide students to active participation in social reform. </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q40-1'> <input type='radio' id=q40-1' class='mdl-radio__button' name='q40' value='1' onclick='handleRadioClick()' checked> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q40-2'> <input type='radio' id=q40-2' class='mdl-radio__button' name='q40' value='2' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q40-3'> <input type='radio' id=q40-3' class='mdl-radio__button' name='q40' value='3' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q40-4'> <input type='radio' id=q40-4' class='mdl-radio__button' name='q40' value='4' onclick='handleRadioClick()'> </label> </td><td class='mdl-data-table__cell--non-numeric'> <label class='mdl-radio mdl-js-radio mdl-js-ripple-effect' for=q40-5'> <input type='radio' id=q40-5' class='mdl-radio__button' name='q40' value='5' onclick='handleRadioClick()'> </label> </td></tr></tbody> </table> <h2 class="title">Results</h2> <table id="result-table" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp"> <thead> <tr> <th class="mdl-data-table__cell--non-numeric sticky">Philosophy</th> <th>Score</th> </tr></thead> <tbody id="result-table-body"> </tbody> </table> <p style="font-size:18px; text-align: center; margin-bottom: 30px;"> To read about your Educational Philosophy Orientation, click <a href="http://oregonstate.edu/instruct/ed416/scoringguide.html" target="_blank">here!!</a> </p><footer style="padding: 30px;"> This content is taken from <a href="http://oregonstate.edu/instruct/ed416/selfassessment.html" target="_blank">Oregon State Self Assessment</a> and <a href="http://oregonstate.edu/instruct/ed416/scoringguide.html" target="_blank">Oregon State Scoring Guide</a>. This content is for the sole purpose of facilitating the self assessment. </footer> <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script> <script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>May 11 Instructions!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+  <style>
+    #trapped { display: none; }
+    #pacman { display: none; }
+    #balloon { display: none; }
+    p { margin: 10px; }
+    ol { margin-left: 50px; }
+  </style>
+</head>
+<body>
+  <div class="tabs is-centered is-large is-fullwidth">
+    <ul>
+      <li class="is-active"><a>9am Dream</a></li>
+      <li><a>10am Trapped</a></li>
+      <li><a>11am Pacman</a></li>
+      <li><a>12pm Balloon Fight</a></li>
+    </ul>
+  </div>
+
+  <!----------------------->
+  <!-- DREAM 9am SECTION!-->
+  <!----------------------->
+  <div id="dream">
+    <section class="section">
+      <div class="container">
+        <!-- TODO LIST-->
+        <h2 class="title">
+          Things to do today
+        </h2>
+        <ol>
+          <li><a href="#velbug">Fix a velocity bug</a></li>
+          <li><a href="#findsprites">Add coin sprites</a></li>
+          <li><a href="#findsprites">Add enemy sprites</a></li>
+          <li><a href="#designmap">Design our map</a></li>
+          <li><a href="#other">Other</a></li>
+          
+          
+        </ol>
+      </div>
+    </section>
+
+  <!-- Fix Velocity bug -->
+    <section class="section" id="velbug">
+      <div class="container">
+        <h2 class="title">Fixing the Velocity bug</h2>
+        <p>
+          Right now, if we jump too high in our game, our player 
+          will fall stright though the floor. This is because
+          PixelPad's frame rate cannot handle speeds that are too 
+          fast. So we need to put a cap on our maximum velocity!
+          <br>
+          Luckily, this is really easy to do! Add these lines to the bottom of the scripts
+        </p>
+
+        <strong>obj_player / start</strong>
+        <pre class="prettyprint"><code class="language-python">
+        ...
+        max_vel = 8
+        </code></pre>
+        <br><br>
+
+        <strong>obj_player / loop</strong>
+        <pre class="prettyprint"><code class="language-python">
+        ...
+        if y_vel > max_vel:
+            y_vel = max_vel  
+        </code></pre>
+        <br><br>
+
+        <p>
+          Done! Now on to the next topic: Finding sprites!
+        </p>
+      </div>
+    </section>
+
+    <!-- Finding sprites -->
+    <section class="section" id="findsprites">
+      <div class="container">
+        <h2 class="title">Finding some sprites!</h2>
+        <p>
+          So our game is shaping up, but we will need a few more sprites
+          to really bring this game together! We need:
+        </p>
+
+        <ol>
+          <li>Some type of collectible</li>
+          <li>Some type of enemy</li>
+        </ol>
+
+        <p>
+          For the collectible, the classic item is a coin, but you can get a lot more creative than that!
+          Maybe a mushroom, maybe a sticker, maybe pacman for  all we know?! It's your game! Just remember two things:
+          <ol>
+            <li>The picture has to be a .png file</li>
+            <li>The picture's background <strong>should</strong> be transparent</li>
+          </ol>
+        </p>
+
+        <p>
+          Once you have the images, upload them into PixelPad (using the green +) and create objects for them and add them to the game.
+          In case you forget how to do that, please refer to the 10 billion other objects we've made.
+        </p>
+
+        <p>
+          And also, <strong>just in case</strong> here's the code!
+        </p>
+
+
+        <strong>obj_&lt;name&gt; / start</strong>
+        <pre class="prettyprint"><code class="language-python">
+        # Bind the sprite to the object
+        sprite = sprite_new('spr_&lt;name&gt;')
+        </code></pre>
+        <br><br>
+
+        <strong>game / start</strong>
+        <pre class="prettyprint"><code class="language-python">
+        # Show the object on screen
+        object_name = object_new('obj_&lt;name&gt;')
+
+        # Move the object around
+        object_name.x = 100
+        object_name.y = -100
+        </code></pre>
+        <br><br>
+
+      </div>
+    </section>
+
+    <!-- Desgining your map -->
+    <section class="section" id="designmap">
+      <div class="container">
+        <h2 class="title">Designing the map</h2>
+
+        <p>
+          This task is a bit more abstract, but like I said in class last week, we need to design a map!
+          So, if you want to, take some time to use the 
+          <strong>game.create_plt()</strong> to create some 
+          platforms, or find a new background if you don't 
+          like the one you are currently using.
+        </p>
+      </div>
+    </section>
+
+    <!-- Other -->
+    <section class="section" id="other">
+      <div class="container">
+        <h2 class="title">Other stuff to do</h2>
+        <ol>
+          <li><a href="https://codingbat.com/python" target="_blank">Coding Bat</a></li>
+          <li><a href="https://play.typeracer.com/" target="_blank">Type Racer</a></li>
+        </ol>
+      </div>
+    </section>
+  </div> 
+
+  <!-------------------------->
+  <!-- TRAPPED 10am SECTION!-->
+  <!-------------------------->
+  <div id="trapped">
+    <section class="section">
+      <div class="container">
+        <!-- TODO LIST-->
+        <h2 class="title">
+          Things to do today
+        </h2>
+        <ol>
+          <li><a href="#velbug2">Fix a velocity bug</a></li>
+          <li><a href="#findsprites2">Add coin sprites</a></li>
+          <li><a href="#findsprites2">Add enemy sprites</a></li>
+          <li><a href="#designmap2">Design our map</a></li>
+          <li><a href="#other2">Other</a></li>
+          
+        </ol>
+      </div>
+    </section>
+
+    <!-- Fix Velocity bug -->
+    <section class="section" id="velbug2">
+      <div class="container">
+        <h2 class="title">Fixing the Velocity bug</h2>
+        <p>
+          Right now, if we jump too high in our game, our player 
+          will fall stright though the floor. This is because
+          PixelPad's frame rate cannot handle speeds that are too 
+          fast. So we need to put a cap on our maximum velocity!
+          <br>
+          Luckily, this is really easy to do! Add these lines to the bottom of the scripts
+        </p>
+
+        <strong>obj_player / start</strong>
+        <pre class="prettyprint"><code class="language-python">
+        ...
+        max_vel = 8
+        </code></pre>
+        <br><br>
+
+        <strong>obj_player / loop</strong>
+        <pre class="prettyprint"><code class="language-python">
+        ...
+        if y_vel > max_vel:
+            y_vel = max_vel  
+        </code></pre>
+        <br><br>
+
+        <p>
+          Done! Now on to the next topic: Finding sprites!
+        </p>
+      </div>
+    </section>
+
+    <!-- Finding sprites -->
+    <section class="section" id="findsprites2">
+      <div class="container">
+        <h2 class="title">Finding some sprites!</h2>
+        <p>
+          So our game is shaping up, but we will need a few more sprites
+          to really bring this game together! We need:
+        </p>
+
+        <ol>
+          <li>Some type of collectible</li>
+          <li>Some type of enemy</li>
+        </ol>
+
+        <p>
+          For the collectible, the classic item is a coin, but you can get a lot more creative than that!
+          Maybe a mushroom, maybe a sticker, maybe pacman for  all we know?! It's your game! Just remember two things:
+          <ol>
+            <li>The picture has to be a .png file</li>
+            <li>The picture's background <strong>should</strong> be transparent</li>
+          </ol>
+        </p>
+
+        <p>
+          Once you have the images, upload them into PixelPad (using the green +) and create objects for them and add them to the game.
+          In case you forget how to do that, please refer to the 10 billion other objects we've made.
+        </p>
+
+        <p>
+          And also, <strong>just in case</strong> here's the code!
+        </p>
+
+
+        <strong>obj_&lt;name&gt; / start</strong>
+        <pre class="prettyprint"><code class="language-python">
+        # Bind the sprite to the object
+        sprite = sprite_new('spr_&lt;name&gt;')
+        </code></pre>
+        <br><br>
+
+        <strong>game / start</strong>
+        <pre class="prettyprint"><code class="language-python">
+        # Show the object on screen
+        object_name = object_new('obj_&lt;name&gt;')
+
+        # Move the object around
+        object_name.x = 100
+        object_name.y = -100
+        </code></pre>
+        <br><br>
+
+      </div>
+    </section>
+
+    <!-- Desgining your map -->
+    <section class="section" id="designmap2">
+      <div class="container">
+        <h2 class="title">Designing the map</h2>
+
+        <p>
+          This task is a bit more abstract, but like I said in class last week, we need to design a map!
+          So, if you want to, take some time to use the 
+          <strong>game.create_plt()</strong> to create some 
+          platforms, or find a new background if you don't 
+          like the one you are currently using.
+        </p>
+      </div>
+    </section>
+
+    <!-- Other -->
+    <section class="section" id="other2">
+        <div class="container">
+          <h2 class="title">Other stuff to do</h2>
+          <ol>
+            <li><a href="https://codingbat.com/python" target="_blank">Coding Bat</a></li>
+            <li><a href="https://play.typeracer.com/" target="_blank">Type Racer</a></li>
+          </ol>
+        </div>
+      </section>
+  </div> 
+
+
+  <!------------------------->
+  <!-- PACMAN 11am SECTION!-->
+  <!------------------------->
+  <div id="pacman">
+    <section class="section">
+      <div class="container">
+        <!-- TODO LIST-->
+        <h2 class="title">
+          Things to do today
+        </h2>
+        <ol>
+          <li><a href="#addpacdots">Add the pacdots!</a></li>
+          <li><a href="#menu">Work on menu screen</a></li>
+          <li><a href="#other3">Other</a></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Add pac dots -->
+    <section id="addpacdots">
+      <div class="container">
+        <h2 class="title">Add Pac dots</h2>
+        <p>
+          We've finished our maze, so now we need to add some pac dots!
+        </p>
+        <p>
+          Remember that in order for our maze to fit on the srcreen, we actually
+          shrunk the maze parts by 10%. If you didn't do that, here is the code in the game script!
+        </p>
+
+        <strong>game / start</strong>
+        <pre class="prettyprint"><code class="language-python">
+        TOP = 220
+        LEFT = -200
+        tsize = 14.4
+        
+        
+        maze = object_new('obj_maze')
+        maze.y = 10000
+        
+        
+        def renderRow(rowList, rowNum):
+          if len(rowList) != 28:
+            print("Row", rowNum, "Does not have 28 sprites, has ", len(rowList))
+            return
+          
+          for i in range(len(rowList)):
+            if rowList[i] == -1:
+              continue
+            t = game.maze.create_tile(rowList[i])
+            # Shrink maze by 10%
+            t.sprite_height = 0.9
+            t.sprite_width = 0.9
+            t.x = game.LEFT + i*game.tsize
+            t.y = game.TOP - rowNum*game.tsize
+        
+        
+        room_set('rm_lvl1')
+        score = 0
+        </code></pre>
+        <br><br>
+
+        <p>
+          Ensuring that code is there is key for the pac dots to work out properly.
+        </p>
+
+        <p>
+          Fist things first, we need to upload the pacdots to pixel pad ( I can't remember 
+          if we did this last class!)
+        </p>
+
+        <p>
+          Next, shrink the pacdots by 10% too! (pdot is pacdot, ppdot is power pac dot (bigger one))
+        </p>
+
+        <strong>obj_pdot / start</strong>
+        <pre class="prettyprint"><code class="language-python">
+        sprite = sprite_new('spr_pdot')
+        sprite_height = 0.9
+        sprite _width = 0.9
+        </code></pre>
+        <br><br>
+
+        <strong>obj_ppdot / start</strong>
+        <pre class="prettyprint"><code class="language-python">
+        sprite = sprite_new('spr_ppdot')
+        sprite_height = 0.9
+        sprite _width = 0.9
+        </code></pre>
+        <br><br>
+
+        <p>
+          Finally, all we have to do is modify the render row function to, instead of ignoring the pacdots, to actually add them in!
+        </p>
+
+        <strong>game / start</strong>
+        <pre class="prettyprint"><code class="language-python">
+        def renderRow(rowList, rowNum):
+          ...
+        
+          for i in range(len(rowList)):
+            if rowList[i] == -1:
+              pdot = object_new('obj_pdot')
+              pdot.x = game.LEFT + i*game.tsize
+              pdot.y = game.TOP - rowNum*game.tsize
+           ...
+        </code></pre>
+        <br><br>
+
+        <p>
+          Once this is done, it's going to look a bit werid, there wil be pacdots everywhere! 
+          Don't worry, we are going to fix that when I get back (We'll need to modify the rows in <strong>rm_lvl1</strong> a bit!)
+        </p>
+      </div>
+    </section>
+
+    <!-- Continue menu screen -->
+    <section class="section" id="menu">
+      <div class="container">
+        <h2 class="title">Menu screen!</h2>
+
+        <p>
+          So a few weeks ago we began a menu screen!
+        </p>
+
+        <p>
+          All of the sprites needed to continue working on the menu screen are in the pacman sprites folder!
+          So if you want to work on that too by all means!
+        </p>
+      </div>
+    </section>
+
+     <!-- Other -->
+     <section class="section" id="other3">
+        <div class="container">
+          <h2 class="title">Other stuff to do</h2>
+          <ol>
+            <li><a href="https://codingbat.com/python" target="_blank">Coding Bat</a></li>
+            <li><a href="https://play.typeracer.com/" target="_blank">Type Racer</a></li>
+          </ol>
+        </div>
+    </section>
+
+
+
+
+  </div>
+
+  <!-------------------------------->
+  <!-- BALLOON FIGHT 12pm SECTION!-->
+  <!-------------------------------->
+  <div id="balloon">
+    <section class="section">
+      <div class="container">
+        <!-- TODO LIST-->
+        <h2 class="title">
+          Things to do today
+        </h2>
+        <ol>
+          <li><a href="#lesson">Do your lesson!</a></li>
+          <li><a href="#othe4">Other</a></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="lesson">
+      <div class="container">
+        <h2 class="title">Lesson!</h2>
+        <p>
+          Work on your lesson! Easy enough I hope!
+        </p>
+      </div>
+    </section>
+
+    <!-- Other -->
+    <section class="section" id="other4">
+      <div class="container">
+        <h2 class="title">Other stuff to do</h2>
+        <ol>
+          <li><a href="https://codingbat.com/python" target="_blank">Coding Bat</a></li>
+          <li><a href="https://play.typeracer.com/" target="_blank">Type Racer</a></li>
+        </ol>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    let $dream = $("#dream");
+    let $trapped = $("#trapped");
+    let $pacman = $("#pacman");
+    let $balloon = $("#balloon");
+    
+    $(".tabs li").click(function() {
+      $("li").removeClass("is-active");
+      $(this).addClass("is-active");
+      
+      switch($(this)[0].innerText) {
+        case "9am Dream":
+          $dream.show();
+          $trapped.hide();
+          $pacman.hide();
+          $balloon.hide();
+          break;
+        case "10am Trapped":
+          $dream.hide();
+          $trapped.show();
+          $pacman.hide();
+          $balloon.hide();
+          break;
+        case "11am Pacman":
+          $dream.hide();
+          $trapped.hide();
+          $pacman.show();
+          $balloon.hide();
+          break;
+        case "12pm Balloon Fight":
+          $dream.hide();
+          $trapped.hide();
+          $pacman.hide();
+          $balloon.show();
+          break;
+
+      }
+    });
+  });
+  </script>
+</body>
+</html>
