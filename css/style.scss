@@ -1,0 +1,160 @@
+$colour-dark: #2e3440;
+$colour-light: #d8dee9;
+$colour-light2: #eceff4;
+$colour-accent: #b48ead;
+$colour-accent: #8fbcbb;
+
+// Reset
+html, body {
+  padding:0;
+  margin:0;
+}
+
+// Default Styles
+html {
+  height: 100%;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: $colour-dark;
+  color: $colour-light;
+  font-size: 1.25rem;
+  height: calc(100% - 32px);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  padding: 5px;
+}
+
+
+a:hover {
+  color: $colour-accent;
+}
+
+nav {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  a {
+    margin-right: 30px;
+    font-weight: 300;
+  }
+
+}
+
+.main {
+  padding: 0 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100% - 32px);
+
+  h1 {
+    margin: 0;
+  }
+  h3 {
+    color: $colour-accent;
+  }
+}
+
+.main-landing {
+  justify-content: center;
+  margin-top: -32px;
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  a {
+    width: 60%;
+    max-width: 550px;
+    margin: 15px auto;
+    background: pink;
+    padding: 0;
+    border-radius: 5px;
+  }
+
+  .contact-button {
+    background: $colour-accent;
+    color: $colour-dark;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+  }
+}
+
+.main-about {
+    h1 {
+      align-self: flex-start;
+    }
+
+    .aboutme-container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        margin-right: 32px;
+        border-radius: 5px;
+      }
+
+      p {
+        width: 50%;
+      }
+
+    }
+}
+
+.main-work {
+
+  h1 {
+    align-self: flex-start;
+  }
+
+  .work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -32px;
+    height: 100%;
+    font-size: 2rem;
+
+    span {
+      margin-right: 15px;
+    }
+  }
+
+}
+
+.main-contact {
+  h1 {
+    align-self: flex-start;
+
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+    font-size: 2rem;
+    margin: -32px 0 0 0;
+    padding: 0;
+    height: 100%;
+
+    li {
+      margin-bottom: 32px;
+
+      span {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
