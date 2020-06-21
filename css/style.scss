@@ -13,15 +13,11 @@ html, body {
 }
 
 // Default Styles
-html {
-  height: 100%;
-}
 body {
   font-family: 'Montserrat', sans-serif;
   background: $colour-dark;
   color: $colour-light;
-  font-size: 1.25rem;
-  height: calc(100% - $nav-size);
+  line-height: 1.6;
 }
 a {
   text-decoration: none;
@@ -45,11 +41,11 @@ header nav {
 }
 
 .main {
-  padding: 0 32px 32px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: calc(100% - $nav-size);
+  height: calc(100vh - #{$nav-size});
+
 
   h1 {
     margin: 0;
@@ -61,10 +57,13 @@ header nav {
 
 .main-landing {
   justify-content: center;
-  margin-top: -$nav-size;
 
   h1 {
-    font-size: 6rem;
+    font-size: calc(2em + 5vw);
+  }
+
+  h3 {
+    font-size: calc(1em + 1vw);
   }
 
   a {
@@ -88,6 +87,7 @@ header nav {
 .main-about {
     h1 {
       align-self: flex-start;
+      margin-left: 32px;
     }
 
     .aboutme-container {
@@ -103,6 +103,7 @@ header nav {
 
       p {
         width: 50%;
+        font-size: calc(1rem + 0.3vw);
       }
     }
 }
@@ -111,15 +112,16 @@ header nav {
 
   h1 {
     align-self: flex-start;
+    margin-left: 32px;
+    display: inline-block;
   }
 
   .work {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: -$nav-size;
     height: 100%;
-    font-size: 2rem;
+    font-size: calc(1rem + 1vw);
 
     span {
       margin-right: 15px;
@@ -131,7 +133,7 @@ header nav {
 .main-contact {
   h1 {
     align-self: flex-start;
-
+    margin-left: 32px;
   }
 
   ul {
@@ -139,8 +141,7 @@ header nav {
     flex-direction: column;
     justify-content: center;
     list-style-type: none;
-    font-size: 2rem;
-    margin: -$nav-size 0 0 0;
+    font-size: calc(1rem + 1vw);
     padding: 0;
     height: 100%;
 
@@ -154,3 +155,35 @@ header nav {
   }
 }
 
+@media only screen and (max-width: 400px) {
+  header nav {
+    justify-content: space-around;
+
+    a {
+      margin: 0;
+
+    }
+  }
+}
+
+
+@media only screen and (max-width: 900px) {
+  .main-about {
+    .aboutme-container{
+
+      flex-direction: column;
+      justify-content: flex-start;
+
+      img {
+        margin: 0;
+        width: 100%;
+      }
+
+      p {
+        width: 80%;
+        margin-bottom: 32px;
+      }
+
+    }
+  }
+}
